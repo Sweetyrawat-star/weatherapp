@@ -45,12 +45,12 @@ intl: ^0.18.1
 
 
 
-|  Splash Screen                                              |                                                   Weather of City View Loaded                               
+|  Splash Screen                                              |                                                   Weather of City View                                
 |:----------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------:|
 | <img width alt="Screen Shot 2020-09-17 at 3 26 13 PM" src="https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/42712fee-37b8-409d-9487-b324c14f0973.png">|<img alt="Screen Shot 2020-09-17 at 3 35 48 PM" src="https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/7c353c75-76ba-4b9c-8239-628fbb2cca04.png">|
 
 
-|  Weather of City View                                              |                                                   Weather of City Description Loaded                               
+|  Weather of City View Loaded                                           |                                                   Weather of City Description Loaded                               
 |:----------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------:|
 | <img width alt="Screen Shot 2020-09-17 at 3 26 13 PM" src="https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/23deae4e-7745-49d1-b414-9aa362fd3b47.png">|<img alt="Screen Shot 2020-09-17 at 3 35 48 PM" src="https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/42b74595-4bb0-440c-8dd5-608588124d69.png">|
 
