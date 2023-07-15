@@ -4,7 +4,9 @@ import 'package:weatherapp/presentation/view/widgets/city_detail_page_body.dart'
 import 'package:weatherapp/presentation/view/widgets/detail_page_appBar.dart';
 
 class WeatherScreen extends StatefulWidget {
-  const WeatherScreen({super.key});
+  final String lat;
+  final String long;
+  const WeatherScreen({super.key, required this.lat, required this.long});
 
   @override
   State<WeatherScreen> createState() => _WeatherScreenState();
@@ -13,16 +15,16 @@ class WeatherScreen extends StatefulWidget {
 class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: 15.0, right: 15, top: 50),
+        padding: const EdgeInsets.only(left: 15.0, right: 15, top: 50),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          WeatherDetailScreenAppBar(),
-          Divider(
+          const WeatherDetailScreenAppBar(),
+          const Divider(
             color: greyColor,
           ),
-          SizedBox(height: 40),
-          WeatherDetailPageBody()
+          const SizedBox(height: 40),
+          WeatherDetailPageBody(lat: widget.lat,long: widget.long,)
         ]),
       ),
     );

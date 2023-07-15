@@ -1,19 +1,33 @@
 import 'package:weatherapp/Data/models/city_weather_detail_model.dart';
 
-abstract class WeatherState {}
-
-class WeatherInitialState extends WeatherState {}
-
-class WeatherLoadingState extends WeatherState {}
-
-class WeatherLoadedState extends WeatherState {
-  final WeatherOfCityDetailModel weather;
-
-  WeatherLoadedState(this.weather);
+abstract class CityWeatherDetailState {
+  final WeatherOfCityDetailModel? cityWeatherEntity;
+  CityWeatherDetailState(this.cityWeatherEntity);
 }
 
-class WeatherErrorState extends WeatherState {
-  final String errorMessage;
-
-  WeatherErrorState(this.errorMessage);
+class CityWeatherDetailInitial extends CityWeatherDetailState {
+  CityWeatherDetailInitial(WeatherOfCityDetailModel placeHolderUserEntity)
+      : super(placeHolderUserEntity);
 }
+
+class CityWeatherDetailProgress extends CityWeatherDetailState {
+  CityWeatherDetailProgress(WeatherOfCityDetailModel? placeHolderUserEntity)
+      : super(null);
+}
+
+class CityWeatherDetailSuccess extends CityWeatherDetailState {
+  final WeatherOfCityDetailModel placeHolderUserEntity;
+
+  CityWeatherDetailSuccess(this.placeHolderUserEntity)
+      : super(placeHolderUserEntity);
+}
+
+class CityWeatherDetailFailed extends CityWeatherDetailState {
+  final String? message;
+
+  CityWeatherDetailFailed(this.message) : super(null);
+}
+
+
+
+

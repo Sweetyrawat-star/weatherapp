@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:weatherapp/Data/models/city_weather_detail_model.dart';
 import 'package:weatherapp/Data/models/city_weather_model.dart';
 import 'package:weatherapp/Domain/repository/repository.dart';
+import 'package:weatherapp/Domain/usecase/city_weather_detail_usecase.dart';
 import 'package:weatherapp/common/exceptions/app_error.dart';
 
 import '../../common/exceptions/app_exception.dart';
@@ -26,9 +27,9 @@ class PostUserReposistoryImpl implements PostUserReposistory{
   }
 
   @override
-  Future<Either<AppError, WeatherOfCityDetailModel>> getCityWeatherDetail() async {
+  Future<Either<AppError, WeatherOfCityDetailModel>> getCityWeatherDetail(CityDataLatLong params) async {
     try {
-      var _response = await _remoteDataSource.getCityWeatherDetail();
+      var _response = await _remoteDataSource.getCityWeatherDetail(params);
       return Right(_response);
     } on SocketException {
       return const Left(AppError(AppErrorType.network));

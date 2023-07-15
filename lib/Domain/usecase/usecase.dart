@@ -13,7 +13,7 @@ class NoParams extends Equatable {
 }
 
 
-class NoParamsLoan extends Equatable {
+class NoParamsData extends Equatable {
   @override
   List<Object> get props => [];
 }

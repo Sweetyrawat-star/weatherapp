@@ -97,7 +97,12 @@ class _AnimatedScrollableListState extends State<AnimatedScrollableList> {
                     onTap: () {
                       Navigator.push(
                           context,
-                          SlidePageRoute(builder: (_) => WeatherScreen()));
+                          SlidePageRoute(
+                              builder: (_) => WeatherScreen(
+                                    long: state.cityWeatherEntity[index].coord.lon.toString(),
+                                    lat: state.cityWeatherEntity[index].coord.lat
+                                        .toString(),
+                                  )));
                     },
                     child: VisibilityDetector(
                       key: Key('item_$index'),
