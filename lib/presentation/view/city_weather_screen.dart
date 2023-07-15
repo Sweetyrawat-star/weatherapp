@@ -53,6 +53,12 @@ class _AnimatedScrollableListState extends State<AnimatedScrollableList> {
     super.initState();
     itemVisibility = List.generate(items.length, (index) => false);
   }
+  @override
+  void dispose() {
+    _cityWeatherBloc.close();
+    // TODO: implement dispose
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

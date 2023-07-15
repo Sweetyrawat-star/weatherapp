@@ -8,10 +8,10 @@ part 'city_weather_detail_event.dart';
 
 class CityWeatherDetailBloc extends Bloc<WeatherDetailEvent, CityWeatherDetailState> {
   final CityWeatherDetailUseCase _cityWeatherDetailUseCase;
-  CityWeatherDetailBloc(this._cityWeatherDetailUseCase) : super(CityWeatherDetailInitial(WeatherOfCityDetailModel())) {
+  CityWeatherDetailBloc(this._cityWeatherDetailUseCase) : super(CityWeatherDetailInitial()) {
     on<WeatherDetailEvent>((event, emit) async {
       if (event is FetchWeatherEvent) {
-        emit(CityWeatherDetailProgress(null));
+        emit(CityWeatherDetailProgress());
         var response = await _cityWeatherDetailUseCase(CityDataLatLong(event.lat,event.lon));
         response.fold(
               (l) => emit(CityWeatherDetailFailed(l.message)),

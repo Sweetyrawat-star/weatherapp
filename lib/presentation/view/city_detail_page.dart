@@ -16,16 +16,21 @@ class _WeatherScreenState extends State<WeatherScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      resizeToAvoidBottomInset: true,
       body: Padding(
         padding: const EdgeInsets.only(left: 15.0, right: 15, top: 50),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const WeatherDetailScreenAppBar(),
-          const Divider(
-            color: greyColor,
-          ),
-          const SizedBox(height: 40),
-          WeatherDetailPageBody(lat: widget.lat,long: widget.long,)
-        ]),
+        child: ListView(
+          children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              const WeatherDetailScreenAppBar(),
+              const Divider(
+                color: greyColor,
+              ),
+              const SizedBox(height: 40),
+              WeatherDetailPageBody(lat: widget.lat,long: widget.long,)
+            ]),
+          ],
+        ),
       ),
     );
   }
