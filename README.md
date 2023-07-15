@@ -41,6 +41,16 @@ animated_text_kit: ^4.2.2
 visibility_detector: ^0.4.0+2
 intl: ^0.18.1
 
+#ScreenShot of App
+Splash Screen ---------------------------------------------------------------------------------------------------------MainPage------------------------
+![splash_Screen](https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/ac1cc009-59d4-4927-94f9-f9422d20f621)
+![main_page](https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/af172b32-825b-4823-81bc-46cd06288233)
+
+--------MainPage Data Loading ------------------------------------------------------------ --------City Weather Detail Page ---------------------------------
 
 
+![main_page_data_loading](https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/6490e45d-2aed-44d1-96e5-9fe6feb9ba27)
+![weather_detail_pagee](https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/d1ad9a47-0350-48dd-99cd-6698a3cd31dd)
 
+----------------------------------------city Weather Detail Page -----------------------
+![city_weather_detail_page](https://github.com/Sweetyrawat-star/weatherapp/assets/57385799/65e9e230-0600-4a99-812e-42bdc832861a)
