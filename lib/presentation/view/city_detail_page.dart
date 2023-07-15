@@ -17,21 +17,37 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       resizeToAvoidBottomInset: true,
-      body: Padding(
-        padding: const EdgeInsets.only(left: 15.0, right: 15, top: 50),
-        child: ListView(
-          children: [
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              const WeatherDetailScreenAppBar(),
-              const Divider(
-                color: greyColor,
-              ),
-              const SizedBox(height: 40),
-              WeatherDetailPageBody(lat: widget.lat,long: widget.long,)
-            ]),
-          ],
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              orangeColor,
+              Colors.white,
+              Colors.white,
+              Colors.white,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
         ),
-      ),
+        child:    Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15, top: 50),
+          child: ListView(
+            children: [
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                const WeatherDetailScreenAppBar(),
+                const Divider(
+                  color: Colors.black12,
+                ),
+                const SizedBox(height: 40),
+                WeatherDetailPageBody(lat: widget.lat,long: widget.long,)
+              ]),
+            ],
+          ),
+        ),
+      )
     );
   }
 }

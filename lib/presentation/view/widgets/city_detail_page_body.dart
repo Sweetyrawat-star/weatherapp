@@ -87,70 +87,72 @@ class _WeatherDetailPageBodyState extends State<WeatherDetailPageBody> {
                 ),
                 SizedBox(
                   height: 200,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            celTemp.toStringAsFixed(1),
-                            style: const TextStyle(fontSize: 100),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Align(
-                            alignment: Alignment.topCenter,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 50.0),
-                              child: Image.asset(
-                                'assets/weather_condition_icons/sunCloud.png',
-                                height: 20,
-                                width: 20,
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              celTemp.toStringAsFixed(1),
+                              style: const TextStyle(fontSize: 95),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Align(
+                              alignment: Alignment.topCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 50.0),
+                                child: Image.asset(
+                                  'assets/weather_condition_icons/sunCloud.png',
+                                  height: 20,
+                                  width: 20,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 60.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Expanded(
-                                  flex: 1,
-                                  child: Text(
-                                    state.cityWeatherEntity.weather?[0].main.toString()??"Cool",
-                                    style:
-                                    const TextStyle(fontSize: 17, color: greyDarkColor),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 60.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      state.cityWeatherEntity.weather?[0].main.toString()??"Cool",
+                                      style:
+                                      const TextStyle(fontSize: 17, color: greyDarkColor),
+                                    ),
                                   ),
-                                ),
-                                const Spacer(),
-                                Expanded(
-                                  flex: 1,
-                                  child: Row(
-                                    children: [
-                                      const Text(
-                                        'feel like ',
-                                        style: TextStyle(
-                                            fontSize: 17, color: greyDarkColor),
-                                      ),
-                                      Text(
-                                        "${celTemp.toStringAsFixed(1)} °",
-                                        style:
-                                        const TextStyle(fontSize: 17, color: darkBlack),
-                                      ),
-                                    ],
+                                  const Spacer(),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Row(
+                                      children: [
+                                        const Text(
+                                          'feel like ',
+                                          style: TextStyle(
+                                              fontSize: 17, color: greyDarkColor),
+                                        ),
+                                        Text(
+                                          "${celTemp.toStringAsFixed(1)} °",
+                                          style:
+                                          const TextStyle(fontSize: 17, color: darkBlack),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      )
-                    ],
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
