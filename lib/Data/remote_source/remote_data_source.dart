@@ -35,7 +35,7 @@ class RemoteDataSourceImpl implements RemoteDataSource{
     }
   }
   Future<WeatherOfCityDetailModel> getCityWeatherDetail(CityDataLatLong params) async {
-    final Response _response = await _dioClient.getRequest(endpoint: ApiConstant.weatherOfCityDetailUrl);
+    final Response _response = await _dioClient.getRequest(endpoint: ApiConstant.getParameter(params));
     if (_response.statusCode == 200 || _response.statusCode == 201) {
       //final Map<String,dynamic> jsonMap = (json.decode(_response.data.toString())) as Map<String,dynamic>;
       final dynamicData = _response.data as Map<String,dynamic>;

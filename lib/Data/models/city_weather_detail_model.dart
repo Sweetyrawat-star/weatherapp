@@ -215,6 +215,11 @@ class Wind {
     this.gust,
   });
 
+  @override
+  String toString(){
+    return speed.toString();
+  }
+
   factory Wind.fromJson(Map<String, dynamic> json) => Wind(
     speed: json["speed"]?.toDouble(),
     deg: json["deg"],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weatherapp/common/constant/appColorConstant.dart';
 import 'package:weatherapp/dependency_injection/get_it.dart';
@@ -201,40 +200,40 @@ class _WeatherDetailPageBodyState extends State<WeatherDetailPageBody> {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: const SizedBox(
+                  child:  SizedBox(
                     width: 150,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               'humidity',
                               style: TextStyle(fontSize: 16),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 30,
                             ),
                             Text(
-                              '63%',
+                              state.cityWeatherEntity.main?.humidity.toString() ?? "10",
                               style: TextStyle(fontSize: 16),
                             ),
                           ],
                         ),
-                        SizedBox(
+                         SizedBox(
                           width: 150,
                           child: Row(
                             children: [
-                              Text(
+                              const Text(
                                 'wind',
                                 style: TextStyle(fontSize: 16),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 30,
                               ),
                               Text(
-                                '5 m/s',
-                                style: TextStyle(fontSize: 16),
+                                "${state.cityWeatherEntity.wind.toString()} m/s" ?? "3 m/s",
+                                style: const TextStyle(fontSize: 16),
                               ),
                             ],
                           ),
@@ -248,12 +247,12 @@ class _WeatherDetailPageBodyState extends State<WeatherDetailPageBody> {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: const SizedBox(
+                  child:  SizedBox(
                     width: 150,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Text(
                               'uv index',
@@ -272,16 +271,16 @@ class _WeatherDetailPageBodyState extends State<WeatherDetailPageBody> {
                           width: 150,
                           child: Row(
                             children: [
-                              Text(
+                              const Text(
                                 'pressure',
                                 style: TextStyle(fontSize: 16),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Text(
-                                '764mmHg',
-                                style: TextStyle(fontSize: 16),
+                               "${state.cityWeatherEntity.main?.pressure.toString()}" ?? "10mmHg",
+                                style: const TextStyle(fontSize: 16),
                               ),
                             ],
                           ),
